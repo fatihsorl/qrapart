@@ -1,0 +1,41 @@
+{
+  "common": {
+    "menu": "Menü",
+    "cart": "Sepet",
+    "callStaff": "Personel Çağır",
+    "language": "Dil",
+    "addToCart": "Sepete Ekle",
+    "orderSummary": "Sipariş Özeti",
+    "total": "Toplam",
+    "placeOrder": "Sipariş Ver",
+    "confirmCallStaff": "Personel çağırmak istediğinize emin misiniz?",
+    "yes": "Evet",
+    "no": "Hayır",
+    "note": "Not",
+    "quantity": "Adet",
+    "product": "Ürün",
+    "price": "Fiyat",
+    "orderPlaced": "Siparişiniz Alındı",
+    "orderTime": "Sipariş Zamanı",
+    "emptyCart": "Sepetinizde Ürün Bulunmuyor",
+    "staffCalled": "Personel çağrınız iletildi",
+    "itemAdded": "{name} sepete eklendi",
+    "itemRemoved": "{name} sepetten çıkarıldı",
+    "itemUpdated": "{name} adedi güncellendi",
+    "cartCleared": "Sepet temizlendi"
+  },
+  "categories": {
+    "restaurant": "Restoran",
+    "minibar": "Mini Bar",
+    "market": "Market"
+  },
+  "subcategories": {
+    "breakfast": "Kahvaltı",
+    "lunch": "Öğle Yemeği",
+    "dinner": "Akşam Yemeği",
+    "drinks": "İçecekler",
+    "snacks": "Atıştırmalıklar",
+    "personalCare": "Kişisel Bakım",
+    "souvenirs": "Hediyelik Eşya"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "common": {
+    "menu": "Menu",
+    "cart": "Cart",
+    "callStaff": "Call Staff",
+    "language": "Language",
+    "addToCart": "Add to Cart",
+    "orderSummary": "Order Summary",
+    "total": "Total",
+    "placeOrder": "Place Order",
+    "confirmCallStaff": "Are you sure you want to call staff?",
+    "yes": "Yes",
+    "no": "No",
+    "note": "Note",
+    "quantity": "Quantity",
+    "product": "Product",
+    "price": "Price",
+    "orderPlaced": "Your order has been placed",
+    "orderTime": "Order time",
+    "emptyCart": "Your cart is empty"
+  },
+  "categories": {
+    "restaurant": "Restaurant",
+    "minibar": "Mini Bar",
+    "market": "Market"
+  },
+  "subcategories": {
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "drinks": "Drinks",
+    "snacks": "Snacks",
+    "personalCare": "Personal Care",
+    "souvenirs": "Souvenirs"
+  }
+}

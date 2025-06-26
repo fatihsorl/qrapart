@@ -1,0 +1,36 @@
+{
+  "common": {
+    "menu": "Меню",
+    "cart": "Корзина",
+    "callStaff": "Вызвать персонал",
+    "language": "Язык",
+    "addToCart": "Добавить в корзину",
+    "orderSummary": "Сводка заказа",
+    "total": "Итого",
+    "placeOrder": "Разместить заказ",
+    "confirmCallStaff": "Вы уверены, что хотите вызвать персонал?",
+    "yes": "Да",
+    "no": "Нет",
+    "note": "Примечание",
+    "quantity": "Количество",
+    "product": "Продукт",
+    "price": "Цена",
+    "orderPlaced": "Ваш заказ размещен",
+    "orderTime": "Время заказа",
+    "emptyCart": "Ваша корзина пуста"
+  },
+  "categories": {
+    "restaurant": "Ресторан",
+    "minibar": "Мини-бар",
+    "market": "Маркет"
+  },
+  "subcategories": {
+    "breakfast": "Завтрак",
+    "lunch": "Обед",
+    "dinner": "Ужин",
+    "drinks": "Напитки",
+    "snacks": "Закуски",
+    "personalCare": "Личная гигиена",
+    "souvenirs": "Сувениры"
+  }
+}

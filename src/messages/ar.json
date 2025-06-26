@@ -1,0 +1,36 @@
+{
+  "common": {
+    "menu": "القائمة",
+    "cart": "سلة التسوق",
+    "callStaff": "استدعاء الموظفين",
+    "language": "اللغة",
+    "addToCart": "أضف إلى السلة",
+    "orderSummary": "ملخص الطلب",
+    "total": "المجموع",
+    "placeOrder": "تقديم الطلب",
+    "confirmCallStaff": "هل أنت متأكد أنك تريد استدعاء الموظفين؟",
+    "yes": "نعم",
+    "no": "لا",
+    "note": "ملاحظة",
+    "quantity": "الكمية",
+    "product": "المنتج",
+    "price": "السعر",
+    "orderPlaced": "تم تقديم طلبك",
+    "orderTime": "وقت الطلب",
+    "emptyCart": "سلة التسوق فارغة"
+  },
+  "categories": {
+    "restaurant": "مطعم",
+    "minibar": "ميني بار",
+    "market": "سوق"
+  },
+  "subcategories": {
+    "breakfast": "الإفطار",
+    "lunch": "الغداء",
+    "dinner": "العشاء",
+    "drinks": "المشروبات",
+    "snacks": "الوجبات الخفيفة",
+    "personalCare": "العناية الشخصية",
+    "souvenirs": "هدايا تذكارية"
+  }
+}
