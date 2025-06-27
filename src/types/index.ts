@@ -17,12 +17,14 @@ export interface CartItem {
 export interface Category {
   id: string;
   name: string;
+  image?: string;
   subcategories: Subcategory[];
 }
 
 export interface Subcategory {
   id: string;
   name: string;
+  image?: string;
 }
 
 export interface Order {

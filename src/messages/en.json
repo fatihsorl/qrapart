@@ -17,12 +17,22 @@
     "price": "Price",
     "orderPlaced": "Your order has been placed",
     "orderTime": "Order time",
-    "emptyCart": "Your cart is empty"
+    "emptyCart": "Your cart is empty",
+    "back": "Go Back",
+    "staffCalled": "Your staff call has been sent",
+    "itemAdded": "{name} added to cart",
+    "itemRemoved": "{name} removed from cart",
+    "itemUpdated": "{name} quantity updated",
+    "cartCleared": "Cart cleared"
   },
   "categories": {
-    "restaurant": "Restaurant",
+    "restaurant": "Menu",
     "minibar": "Mini Bar",
-    "market": "Market"
+    "market": "Market",
+    "içecekler": "Drinks",
+    "tostÇeşitleri": "Toast Varieties",
+    "anaYemekler": "Main Dishes",
+    "kahvaltıVeHafifYemekler": "Breakfast & Light Meals"
   },
   "subcategories": {
     "breakfast": "Breakfast",
@@ -31,6 +41,12 @@
     "drinks": "Drinks",
     "snacks": "Snacks",
     "personalCare": "Personal Care",
-    "souvenirs": "Souvenirs"
+    "souvenirs": "Souvenirs",
+    "toasts": "Toast Varieties",
+    "mainDishes": "Main Dishes",
+    "tostÇeşitleri": "Toast Varieties",
+    "anaYemekler": "Main Dishes",
+    "kahvaltıVeHafifYemekler": "Breakfast & Light Meals",
+    "içecekler": "Drinks"
   }
 }

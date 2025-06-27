@@ -7,6 +7,7 @@ import { Notification } from '../ui/Notification';
 import { useCart } from '@/context/CartContext';
 import { CallStaffModal } from '../CallStaffModal';
 import { useTranslations } from 'next-intl';
+import { FiBell } from 'react-icons/fi';
 
 interface LayoutProps {
     children: ReactNode;
@@ -28,13 +29,22 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <div className="flex min-h-screen flex-col">
-            <Header onCallStaff={handleCallStaff} />
+            <Header />
             <main className="flex-1 py-6">
                 <div className="container mx-auto px-4">
                     {children}
                 </div>
             </main>
             <Footer />
+
+            {/* Sabit Personel Çağır Butonu */}
+            <button
+                onClick={handleCallStaff}
+                className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full bg-blue-600 p-3 shadow-lg hover:bg-blue-700 transition-colors"
+                aria-label={t('callStaff')}
+            >
+                <FiBell size={24} className="text-white" />
+            </button>
 
             {notification && (
                 <Notification

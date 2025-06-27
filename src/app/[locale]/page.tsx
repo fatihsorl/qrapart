@@ -4,23 +4,17 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Layout } from '@/components/layout/Layout';
-import { CategoryMenu } from '@/components/menu/CategoryMenu';
 import { SubcategoryMenu } from '@/components/menu/SubcategoryMenu';
 import { ProductGrid } from '@/components/menu/ProductGrid';
 import { categories } from '@/data/categories';
 import { products } from '@/data/products';
 import { Category } from '@/types';
 import { motion } from 'framer-motion';
-
-const categoryImages = {
-    restaurant: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=500&auto=format&fit=crop',
-    minibar: 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=500&auto=format&fit=crop',
-    market: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=500&auto=format&fit=crop'
-};
+import { FiArrowLeft } from 'react-icons/fi';
 
 export default function Home() {
-    const t = useTranslations('common');
     const categoryT = useTranslations('categories');
+    const subcategoryT = useTranslations('subcategories');
     const [selectedCategory, setSelectedCategory] = React.useState<string | null>(null);
     const [selectedSubcategory, setSelectedSubcategory] = React.useState<string | null>(null);
 
@@ -32,7 +26,23 @@ export default function Home() {
     // Kategori değiştiğinde alt kategoriyi sıfırlayan fonksiyon
     const handleCategoryChange = (categoryId: string | null) => {
         setSelectedCategory(categoryId);
-        setSelectedSubcategory(null); // Alt kategoriyi her zaman "Tümü" olarak ayarla
+        setSelectedSubcategory(null);
+    };
+
+    // Alt kategori seçildiğinde
+    const handleSubcategoryChange = (subcategoryId: string | null) => {
+        setSelectedSubcategory(subcategoryId);
+    };
+
+    // Geri dönüş fonksiyonu
+    const handleBack = () => {
+        if (selectedSubcategory) {
+            setSelectedSubcategory(null);
+        } else if (selectedCategory === "restaurant") {
+            setSelectedCategory(null);
+        } else if (selectedCategory) {
+            setSelectedCategory(null);
+        }
     };
 
     // Filter products based on selected category and subcategory
@@ -45,7 +55,7 @@ export default function Home() {
             return false;
         }
 
-        return true; // Show all products if no category is selected, or show filtered products
+        return true;
     });
 
     const container = {
@@ -63,56 +73,119 @@ export default function Home() {
         show: { opacity: 1, y: 0 }
     };
 
-    return (
-        <Layout>
-            <div className="mb-6">
-                <h1 className="text-3xl font-bold text-center mb-2 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                    {t('menu')}
-                </h1>
-                <p className="text-center text-gray-500 mb-6">
-                    {!selectedCategory ? 'Lütfen bir kategori seçin' : categoryT(currentCategory!.name)}
-                </p>
-            </div>
+    // Restaurant menü alt kategorilerini gösterme fonksiyonu
+    const renderRestaurantSubcategories = () => {
+        if (!currentCategory || currentCategory.id !== "restaurant") return null;
 
-            {!selectedCategory ? (
+        return (
+            <>
+                <div className="mb-6 flex items-center">
+                    <button
+                        onClick={handleBack}
+                        className="mr-3 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                    >
+                        <FiArrowLeft size={20} className="text-gray-700" />
+                    </button>
+                    <h1 className="text-3xl font-bold text-center flex-1 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
+                        KATEGORİLER
+                    </h1>
+                </div>
                 <motion.div
-                    className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                    className="grid grid-cols-2 gap-4"
                     variants={container}
                     initial="hidden"
                     animate="show"
                 >
-                    {categories.map((category) => (
+                    {currentCategory.subcategories.map((subcategory) => (
                         <motion.div
-                            key={category.id}
-                            className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg transition-all hover:shadow-xl cursor-pointer transform hover:scale-[1.02]"
-                            onClick={() => handleCategoryChange(category.id)}
+                            key={subcategory.id}
+                            className="overflow-hidden rounded-lg shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all"
+                            onClick={() => handleSubcategoryChange(subcategory.id)}
                             variants={item}
                         >
-                            <div className="relative h-48 w-full overflow-hidden">
+                            <div className="relative h-40 w-full overflow-hidden">
                                 <Image
-                                    src={categoryImages[category.id as keyof typeof categoryImages]}
-                                    alt={categoryT(category.name)}
+                                    src={subcategory.image || '/images/placeholder-food.jpg'}
+                                    alt={categoryT(subcategory.name)}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform hover:scale-105 duration-500"
-                                    priority={false}
+                                    priority={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                                    <h3 className="text-2xl font-bold text-white">{categoryT(category.name)}</h3>
+                                    <h3 className="text-xl font-bold text-white">{categoryT(subcategory.name)}</h3>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
-            ) : (
-                <>
-                    <CategoryMenu
-                        categories={categories}
-                        selectedCategory={selectedCategory}
-                        onSelectCategory={handleCategoryChange}
-                    />
+            </>
+        );
+    };
 
-                    {currentCategory && (
+    return (
+        <Layout>
+            {!selectedCategory ? (
+                // Ana kategorileri göster
+                <>
+                    <div className="mb-6">
+                        <h1 className="text-3xl font-bold text-center mb-2 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
+                            KATEGORİLER
+                        </h1>
+                    </div>
+                    <motion.div
+                        className="grid grid-cols-2 gap-4"
+                        variants={container}
+                        initial="hidden"
+                        animate="show"
+                    >
+                        {categories.map((category) => (
+                            <motion.div
+                                key={category.id}
+                                className="overflow-hidden rounded-lg shadow-lg cursor-pointer transform hover:scale-[1.02] transition-all"
+                                onClick={() => handleCategoryChange(category.id)}
+                                variants={item}
+                            >
+                                <div className="relative h-40 w-full overflow-hidden">
+                                    <Image
+                                        src={category.image || '/images/placeholder-food.jpg'}
+                                        alt={categoryT(category.name)}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover transition-transform hover:scale-105 duration-500"
+                                        priority={true}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                                        <h3 className="text-xl font-bold text-white">{categoryT(category.name)}</h3>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </>
+            ) : selectedCategory === "restaurant" && !selectedSubcategory ? (
+                // Restaurant alt kategorilerini göster
+                renderRestaurantSubcategories()
+            ) : (
+                // Ürünleri göster
+                <>
+                    <div className="flex items-center mb-6">
+                        <button
+                            onClick={handleBack}
+                            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        >
+                            <FiArrowLeft size={20} className="text-gray-700" />
+                        </button>
+                        <div className="ml-3 flex-1">
+                            <h2 className="text-xl font-bold text-white">
+                                {selectedSubcategory
+                                    ? subcategoryT(selectedSubcategory)
+                                    : categoryT(selectedCategory || '')}
+                            </h2>
+                        </div>
+                    </div>
+
+                    {currentCategory && currentCategory.subcategories.length > 0 && (
                         <SubcategoryMenu
                             subcategories={currentCategory.subcategories}
                             selectedSubcategory={selectedSubcategory}

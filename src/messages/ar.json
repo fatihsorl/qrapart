@@ -17,12 +17,22 @@
     "price": "السعر",
     "orderPlaced": "تم تقديم طلبك",
     "orderTime": "وقت الطلب",
-    "emptyCart": "سلة التسوق فارغة"
+    "emptyCart": "سلة التسوق فارغة",
+    "back": "رجوع",
+    "staffCalled": "تم إرسال طلب استدعاء الموظفين",
+    "itemAdded": "تمت إضافة {name} إلى السلة",
+    "itemRemoved": "تمت إزالة {name} من السلة",
+    "itemUpdated": "تم تحديث كمية {name}",
+    "cartCleared": "تم تفريغ السلة"
   },
   "categories": {
-    "restaurant": "مطعم",
+    "restaurant": "القائمة",
     "minibar": "ميني بار",
-    "market": "سوق"
+    "market": "سوق",
+    "içecekler": "المشروبات",
+    "tostÇeşitleri": "أنواع التوست",
+    "anaYemekler": "الأطباق الرئيسية",
+    "kahvaltıVeHafifYemekler": "الإفطار والوجبات الخفيفة"
   },
   "subcategories": {
     "breakfast": "الإفطار",
@@ -31,6 +41,12 @@
     "drinks": "المشروبات",
     "snacks": "الوجبات الخفيفة",
     "personalCare": "العناية الشخصية",
-    "souvenirs": "هدايا تذكارية"
+    "souvenirs": "هدايا تذكارية",
+    "toasts": "أنواع التوست",
+    "mainDishes": "الأطباق الرئيسية",
+    "tostÇeşitleri": "أنواع التوست",
+    "anaYemekler": "الأطباق الرئيسية",
+    "kahvaltıVeHafifYemekler": "الإفطار والوجبات الخفيفة",
+    "içecekler": "المشروبات"
   }
 }

@@ -1,9 +1,146 @@
 import { Product } from "@/types";
 
 export const products: Product[] = [
-  // Restoran - Kahvaltı
+  // Restaurant - İçecekler
   {
     id: "1",
+    name: "Ayran",
+    description: "Geleneksel Türk yoğurt içeceği",
+    price: 15,
+    image:
+      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "drinks",
+  },
+  {
+    id: "2",
+    name: "Türk Kahvesi",
+    description: "Geleneksel Türk kahvesi",
+    price: 25,
+    image:
+      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "drinks",
+  },
+  {
+    id: "3",
+    name: "Çay",
+    description: "Demli Türk çayı",
+    price: 10,
+    image:
+      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "drinks",
+  },
+  {
+    id: "4",
+    name: "Limonata",
+    description: "Ev yapımı taze limonata",
+    price: 20,
+    image:
+      "https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "drinks",
+  },
+  {
+    id: "5",
+    name: "Portakal Suyu",
+    description: "Taze sıkılmış portakal suyu",
+    price: 25,
+    image:
+      "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "drinks",
+  },
+
+  // Restaurant - Tost Çeşitleri
+  {
+    id: "6",
+    name: "Kaşarlı Tost",
+    description: "Bol kaşarlı tost",
+    price: 40,
+    image:
+      "https://images.unsplash.com/photo-1604467707321-70d5ac45adda?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "toasts",
+  },
+  {
+    id: "7",
+    name: "Karışık Tost",
+    description: "Kaşar, sucuk ve domates ile hazırlanmış karışık tost",
+    price: 50,
+    image:
+      "https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "toasts",
+  },
+  {
+    id: "8",
+    name: "Sucuklu Tost",
+    description: "Bol sucuklu tost",
+    price: 45,
+    image:
+      "https://images.unsplash.com/photo-1481070414801-51fd732d7184?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "toasts",
+  },
+  {
+    id: "9",
+    name: "Ayvalık Tostu",
+    description: "Özel soslu, kaşarlı, sucuklu ve turşulu Ayvalık tostu",
+    price: 60,
+    image:
+      "https://images.unsplash.com/photo-1528736235302-52922df5c122?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "toasts",
+  },
+
+  // Restaurant - Ana Yemekler
+  {
+    id: "10",
+    name: "Izgara Köfte",
+    description: "Yanında pilav ve salata ile servis edilen ızgara köfte",
+    price: 120,
+    image:
+      "https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "mainDishes",
+  },
+  {
+    id: "11",
+    name: "Tavuk Şiş",
+    description: "Özel baharatlarla marine edilmiş tavuk şiş",
+    price: 100,
+    image:
+      "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "mainDishes",
+  },
+  {
+    id: "12",
+    name: "Adana Kebap",
+    description: "Acılı kıyma kebabı, yanında lavaş ve soğan ile",
+    price: 140,
+    image:
+      "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "mainDishes",
+  },
+  {
+    id: "13",
+    name: "İskender Kebap",
+    description:
+      "Döner, yoğurt, tereyağı ve domates sosu ile servis edilen kebap",
+    price: 160,
+    image:
+      "https://images.unsplash.com/photo-1644364935906-dca34c0e2dba?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "mainDishes",
+  },
+
+  // Restaurant - Kahvaltı & Hafif Yemekler
+  {
+    id: "14",
     name: "Serpme Kahvaltı",
     description: "Zengin içerikli serpme kahvaltı tabağı",
     price: 250,
@@ -13,7 +150,7 @@ export const products: Product[] = [
     subcategory: "breakfast",
   },
   {
-    id: "2",
+    id: "15",
     name: "Menemen",
     description:
       "Domates, biber ve yumurta ile hazırlanmış geleneksel Türk kahvaltısı",
@@ -24,17 +161,7 @@ export const products: Product[] = [
     subcategory: "breakfast",
   },
   {
-    id: "19",
-    name: "Simit & Peynir",
-    description: "Taze simit ve beyaz peynir tabağı",
-    price: 60,
-    image:
-      "https://images.unsplash.com/photo-1585540083814-ea6ee8af9e4f?q=80&w=500&auto=format&fit=crop",
-    category: "restaurant",
-    subcategory: "breakfast",
-  },
-  {
-    id: "20",
+    id: "16",
     name: "Omlet",
     description: "Peynirli veya sebzeli omlet seçeneği",
     price: 65,
@@ -43,30 +170,20 @@ export const products: Product[] = [
     category: "restaurant",
     subcategory: "breakfast",
   },
+  {
+    id: "17",
+    name: "Simit & Peynir",
+    description: "Taze simit ve beyaz peynir tabağı",
+    price: 60,
+    image:
+      "https://images.unsplash.com/photo-1585540083814-ea6ee8af9e4f?q=80&w=500&auto=format&fit=crop",
+    category: "restaurant",
+    subcategory: "breakfast",
+  },
 
-  // Restoran - Öğle Yemeği
+  // Restaurant - Öğle Yemeği
   {
-    id: "3",
-    name: "Izgara Köfte",
-    description: "Yanında pilav ve salata ile servis edilen ızgara köfte",
-    price: 120,
-    image:
-      "https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=500&auto=format&fit=crop",
-    category: "restaurant",
-    subcategory: "lunch",
-  },
-  {
-    id: "4",
-    name: "Tavuk Şiş",
-    description: "Özel baharatlarla marine edilmiş tavuk şiş",
-    price: 100,
-    image:
-      "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=500&auto=format&fit=crop",
-    category: "restaurant",
-    subcategory: "lunch",
-  },
-  {
-    id: "21",
+    id: "18",
     name: "Mercimek Çorbası",
     description: "Geleneksel Türk mercimek çorbası",
     price: 45,
@@ -76,7 +193,7 @@ export const products: Product[] = [
     subcategory: "lunch",
   },
   {
-    id: "22",
+    id: "19",
     name: "Etli Güveç",
     description: "Sebzeli ve etli güveç, yanında pilav ile",
     price: 130,
@@ -86,9 +203,9 @@ export const products: Product[] = [
     subcategory: "lunch",
   },
 
-  // Restoran - Akşam Yemeği
+  // Restaurant - Akşam Yemeği
   {
-    id: "5",
+    id: "20",
     name: "Karışık Izgara",
     description:
       "Köfte, pirzola, tavuk ve sebzelerden oluşan karışık ızgara tabağı",
@@ -99,28 +216,7 @@ export const products: Product[] = [
     subcategory: "dinner",
   },
   {
-    id: "6",
-    name: "Adana Kebap",
-    description: "Acılı kıyma kebabı, yanında lavaş ve soğan ile",
-    price: 140,
-    image:
-      "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=500&auto=format&fit=crop",
-    category: "restaurant",
-    subcategory: "dinner",
-  },
-  {
-    id: "23",
-    name: "İskender Kebap",
-    description:
-      "Döner, yoğurt, tereyağı ve domates sosu ile servis edilen kebap",
-    price: 160,
-    image:
-      "https://images.unsplash.com/photo-1644364935906-dca34c0e2dba?q=80&w=500&auto=format&fit=crop",
-    category: "restaurant",
-    subcategory: "dinner",
-  },
-  {
-    id: "24",
+    id: "21",
     name: "Balık Izgara",
     description: "Mevsim balığı ızgara, yanında salata ve patates ile",
     price: 170,
@@ -132,27 +228,7 @@ export const products: Product[] = [
 
   // Mini Bar - İçecekler
   {
-    id: "7",
-    name: "Ayran",
-    description: "Geleneksel Türk yoğurt içeceği",
-    price: 15,
-    image:
-      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=500&auto=format&fit=crop",
-    category: "minibar",
-    subcategory: "drinks",
-  },
-  {
-    id: "8",
-    name: "Türk Kahvesi",
-    description: "Geleneksel Türk kahvesi",
-    price: 25,
-    image:
-      "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=500&auto=format&fit=crop",
-    category: "minibar",
-    subcategory: "drinks",
-  },
-  {
-    id: "9",
+    id: "22",
     name: "Yerli Bira",
     description: "Soğuk yerli bira",
     price: 60,
@@ -162,7 +238,7 @@ export const products: Product[] = [
     subcategory: "drinks",
   },
   {
-    id: "10",
+    id: "23",
     name: "Kırmızı Şarap",
     description: "Kadeh kırmızı şarap",
     price: 80,
@@ -172,7 +248,7 @@ export const products: Product[] = [
     subcategory: "drinks",
   },
   {
-    id: "25",
+    id: "24",
     name: "Meyve Suyu",
     description: "Taze sıkılmış portakal, elma veya nar suyu",
     price: 30,
@@ -182,7 +258,7 @@ export const products: Product[] = [
     subcategory: "drinks",
   },
   {
-    id: "26",
+    id: "25",
     name: "Soda",
     description: "Maden suyu veya meyveli soda çeşitleri",
     price: 15,
@@ -194,7 +270,7 @@ export const products: Product[] = [
 
   // Mini Bar - Atıştırmalıklar
   {
-    id: "11",
+    id: "26",
     name: "Baklava",
     description: "Fıstıklı baklava",
     price: 70,
@@ -204,7 +280,7 @@ export const products: Product[] = [
     subcategory: "snacks",
   },
   {
-    id: "12",
+    id: "27",
     name: "Sütlaç",
     description: "Fırında pişirilmiş geleneksel sütlaç",
     price: 45,
@@ -214,7 +290,7 @@ export const products: Product[] = [
     subcategory: "snacks",
   },
   {
-    id: "13",
+    id: "28",
     name: "Cips",
     description: "Patates cipsi",
     price: 30,
@@ -224,7 +300,7 @@ export const products: Product[] = [
     subcategory: "snacks",
   },
   {
-    id: "14",
+    id: "29",
     name: "Çikolata",
     description: "Sütlü çikolata",
     price: 20,
@@ -233,107 +309,67 @@ export const products: Product[] = [
     category: "minibar",
     subcategory: "snacks",
   },
-  {
-    id: "27",
-    name: "Kuruyemiş",
-    description: "Karışık kuruyemiş paketi",
-    price: 40,
-    image:
-      "https://images.unsplash.com/photo-1536591375067-d73f7aa11f28?q=80&w=500&auto=format&fit=crop",
-    category: "minibar",
-    subcategory: "snacks",
-  },
-  {
-    id: "28",
-    name: "Meyve Tabağı",
-    description: "Mevsim meyveleri tabağı",
-    price: 55,
-    image:
-      "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=500&auto=format&fit=crop",
-    category: "minibar",
-    subcategory: "snacks",
-  },
 
   // Market - Kişisel Bakım
   {
-    id: "15",
+    id: "30",
     name: "Diş Fırçası",
     description: "Yumuşak diş fırçası",
-    price: 40,
+    price: 25,
     image:
-      "https://images.unsplash.com/photo-1559591922-04b4893c758f?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1559591934-60c904a4a1b2?q=80&w=500&auto=format&fit=crop",
     category: "market",
     subcategory: "personalCare",
   },
   {
-    id: "16",
+    id: "31",
     name: "Diş Macunu",
     description: "Nane aromalı diş macunu",
-    price: 35,
+    price: 30,
     image:
-      "https://images.unsplash.com/photo-1612536057832-2ff7ead58194?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=500&auto=format&fit=crop",
     category: "market",
     subcategory: "personalCare",
   },
   {
-    id: "29",
-    name: "Şampuan",
-    description: "Saç tiplerine uygun şampuan çeşitleri",
-    price: 45,
+    id: "32",
+    name: "Duş Jeli",
+    description: "Ferahlatıcı duş jeli",
+    price: 40,
     image:
-      "https://images.unsplash.com/photo-1626784215021-2e914faa9950?q=80&w=500&auto=format&fit=crop",
-    category: "market",
-    subcategory: "personalCare",
-  },
-  {
-    id: "30",
-    name: "Güneş Kremi",
-    description: "SPF 50+ koruma faktörlü güneş kremi",
-    price: 85,
-    image:
-      "https://images.unsplash.com/photo-1521223344201-d169129f7b7d?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=500&auto=format&fit=crop",
     category: "market",
     subcategory: "personalCare",
   },
 
   // Market - Hediyelik Eşya
   {
-    id: "17",
-    name: "Türk Lokumu",
-    description: "Geleneksel Türk lokumu",
-    price: 50,
-    image:
-      "https://images.unsplash.com/photo-1577004686904-1a4f118acf61?q=80&w=500&auto=format&fit=crop",
-    category: "market",
-    subcategory: "souvenirs",
-  },
-  {
-    id: "18",
+    id: "33",
     name: "Magnet",
-    description: "Türkiye temalı buzdolabı magneti",
-    price: 25,
+    description: "Şehir temalı buzdolabı magneti",
+    price: 15,
     image:
-      "https://images.unsplash.com/photo-1601001815894-4bb6c81416d7?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1620236104164-d2e71d7f4b1f?q=80&w=500&auto=format&fit=crop",
     category: "market",
     subcategory: "souvenirs",
   },
   {
-    id: "31",
-    name: "El Yapımı Seramik",
-    description: "Yerel zanaatkarlar tarafından yapılmış seramik eşyalar",
+    id: "34",
+    name: "Anahtarlık",
+    description: "Şehir temalı anahtarlık",
+    price: 20,
+    image:
+      "https://images.unsplash.com/photo-1611001440648-0ea68d2cd66f?q=80&w=500&auto=format&fit=crop",
+    category: "market",
+    subcategory: "souvenirs",
+  },
+  {
+    id: "35",
+    name: "Tişört",
+    description: "Şehir temalı tişört",
     price: 120,
     image:
-      "https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=500&auto=format&fit=crop",
-    category: "market",
-    subcategory: "souvenirs",
-  },
-  {
-    id: "32",
-    name: "Türk Halısı (Minyatür)",
-    description: "El dokuma minyatür Türk halısı",
-    price: 150,
-    image:
-      "https://images.unsplash.com/photo-1582903222004-c1dfa5b8a4e9?q=80&w=500&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=500&auto=format&fit=crop",
     category: "market",
     subcategory: "souvenirs",
   },

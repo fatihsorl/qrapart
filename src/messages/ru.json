@@ -17,12 +17,22 @@
     "price": "Цена",
     "orderPlaced": "Ваш заказ размещен",
     "orderTime": "Время заказа",
-    "emptyCart": "Ваша корзина пуста"
+    "emptyCart": "Ваша корзина пуста",
+    "back": "Назад",
+    "staffCalled": "Ваш вызов персонала отправлен",
+    "itemAdded": "{name} добавлен в корзину",
+    "itemRemoved": "{name} удален из корзины",
+    "itemUpdated": "Количество {name} обновлено",
+    "cartCleared": "Корзина очищена"
   },
   "categories": {
-    "restaurant": "Ресторан",
+    "restaurant": "Меню",
     "minibar": "Мини-бар",
-    "market": "Маркет"
+    "market": "Маркет",
+    "içecekler": "Напитки",
+    "tostÇeşitleri": "Тосты",
+    "anaYemekler": "Основные блюда",
+    "kahvaltıVeHafifYemekler": "Завтрак и легкие блюда"
   },
   "subcategories": {
     "breakfast": "Завтрак",
@@ -31,6 +41,12 @@
     "drinks": "Напитки",
     "snacks": "Закуски",
     "personalCare": "Личная гигиена",
-    "souvenirs": "Сувениры"
+    "souvenirs": "Сувениры",
+    "toasts": "Тосты",
+    "mainDishes": "Основные блюда",
+    "tostÇeşitleri": "Тосты",
+    "anaYemekler": "Основные блюда",
+    "kahvaltıVeHafifYemekler": "Завтрак и легкие блюда",
+    "içecekler": "Напитки"
   }
 }

@@ -22,12 +22,17 @@
     "itemAdded": "{name} sepete eklendi",
     "itemRemoved": "{name} sepetten çıkarıldı",
     "itemUpdated": "{name} adedi güncellendi",
-    "cartCleared": "Sepet temizlendi"
+    "cartCleared": "Sepet temizlendi",
+    "back": "Geri Dön"
   },
   "categories": {
-    "restaurant": "Restoran",
+    "restaurant": "Menü",
     "minibar": "Mini Bar",
-    "market": "Market"
+    "market": "Market",
+    "içecekler": "İçecekler",
+    "tostÇeşitleri": "Tost Çeşitleri",
+    "anaYemekler": "Ana Yemekler",
+    "kahvaltıVeHafifYemekler": "Kahvaltı & Hafif Yemekler"
   },
   "subcategories": {
     "breakfast": "Kahvaltı",
@@ -36,6 +41,12 @@
     "drinks": "İçecekler",
     "snacks": "Atıştırmalıklar",
     "personalCare": "Kişisel Bakım",
-    "souvenirs": "Hediyelik Eşya"
+    "souvenirs": "Hediyelik Eşya",
+    "toasts": "Tost Çeşitleri",
+    "mainDishes": "Ana Yemekler",
+    "tostÇeşitleri": "Tost Çeşitleri",
+    "anaYemekler": "Ana Yemekler",
+    "kahvaltıVeHafifYemekler": "Kahvaltı & Hafif Yemekler",
+    "içecekler": "İçecekler"
   }
 }
